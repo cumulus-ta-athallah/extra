@@ -1,5 +1,5 @@
 # Use a lightweight Node.js image as the base
-FROM node:alpine AS builder
+FROM node:lts-alpine AS builder
 
 # Set the working directory for the build stage
 WORKDIR /app
