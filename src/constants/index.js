@@ -1,1 +1,1 @@
-export const API_URL = `${process.env.ROOT_URL}/api/students/`;
+export const API_URL = `${process.env.REACT_APP_ROOT_URL}/api/students/`;
