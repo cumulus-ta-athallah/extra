@@ -5,6 +5,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 
+require('dotenv').config();
 const root = createRoot(document.getElementById('root'));
 root.render(<App />);
 
