@@ -4,8 +4,9 @@ FROM node:lts-alpine AS builder
 # Set the working directory for the build stage
 WORKDIR /app
 
-# Copy package.json so we know what dependencies to install
+# Copy package.json and yarn.lock (recommended for reproducibility)
 COPY package*.json ./
+COPY yarn.lock ./
 
 # Load environment variables
 ARG REACT_APP_ROOT_URL=${REACT_APP_ROOT_URL}
