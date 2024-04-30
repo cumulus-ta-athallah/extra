@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy package.json so we know what dependencies to install
 COPY package*.json ./
 
-# Load environment variables from .env file
-RUN source .env
+# Load environment variables
+ARG REACT_APP_ROOT_URL=${REACT_APP_ROOT_URL}
 
 # Install dependencies using Yarn
 RUN yarn install --production
