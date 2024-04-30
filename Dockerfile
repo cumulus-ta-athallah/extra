@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy package.json so we know what dependencies to install
 COPY package*.json ./
 
+# Load environment variables from .env file
+RUN source .env
+
 # Install dependencies using Yarn
 RUN yarn install --production
 
