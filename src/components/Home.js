@@ -17,7 +17,6 @@ class Home extends Component {
   }
 
   getStudents = () => {
-    console.log(API_URL);
     axios.get(API_URL).then(res => this.setState({ students: res.data }));
   };
 
