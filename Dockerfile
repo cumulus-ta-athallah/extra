@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Load environment variables
 ARG REACT_APP_ROOT_URL=${REACT_APP_ROOT_URL}
+ENV REACT_APP_ROOT_URL=${REACT_APP_ROOT_URL}
 
 # Install dependencies using Yarn
 RUN yarn install --production
