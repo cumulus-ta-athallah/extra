@@ -16,6 +16,7 @@ ENV REACT_APP_ROOT_URL=${REACT_APP_ROOT_URL}
 RUN corepack enable
 
 # Install dependencies using Yarn
+RUN yarn install
 RUN yarn workspaces focus --production
 
 # Copy the entire project directory
