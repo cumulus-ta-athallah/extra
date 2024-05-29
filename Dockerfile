@@ -12,6 +12,9 @@ COPY yarn.lock ./
 ARG REACT_APP_ROOT_URL=${REACT_APP_ROOT_URL}
 ENV REACT_APP_ROOT_URL=${REACT_APP_ROOT_URL}
 
+# Enable corepack (due to new version of Yarn)
+RUN corepack enable
+
 # Install dependencies using Yarn
 RUN yarn install --production
 
